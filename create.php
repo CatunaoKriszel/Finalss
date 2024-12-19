@@ -70,7 +70,7 @@
             $year = $_POST['year'];
             $description = $_POST['description'];
 
-            $sql = "INSERT INTO `users`(`title`, `author`, `genre`, `pyear`, `description`) 
+            $sql = "INSERT INTO `books`(`title`, `author`, `genre`, `pyear`, `description`) 
                     VALUES ('$title', '$author', '$genre', '$year', '$description')";
 
             $result = $conn->query($sql);
