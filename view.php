@@ -2,7 +2,7 @@
 include "config.php";
 
 // Fetch all books
-$sql = "SELECT * FROM users";  // Adjust the table to 'books'
+$sql = "SELECT * FROM books";  // Adjust the table to 'books'
 $result = $conn->query($sql);
 
 // Check for a success message from delete
@@ -136,3 +136,4 @@ $message = isset($_GET['message']) ? $_GET['message'] : "";
     </div> 
 </body>
 </html>
+
