@@ -120,7 +120,7 @@ $message = isset($_GET['message']) ? $_GET['message'] : "";
                     <td><?php echo $row['title']; ?></td>                    
                     <td><?php echo $row['author']; ?></td>                    
                     <td><?php echo $row['genre']; ?></td>                    
-                    <td><?php echo $row['publication_year']; ?></td>                    
+                    <td><?php echo $row['year']; ?></td>                    
                     <td><?php echo $row['description']; ?></td>                    
                     <td>
                         <a class="btn btn-info" href="update.php?id=<?php echo $row['id']; ?>">Edit</a>&nbsp;
