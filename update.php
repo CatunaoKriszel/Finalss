@@ -8,10 +8,10 @@ if (isset($_POST['update'])) {
     $book_id = $_POST['book_id'];
     $author = $_POST['author'];
     $genre = $_POST['genre'];
-    $publication_year = $_POST['publication_year'];
+    $year = $_POST['year'];
     $description = $_POST['description'];
 
-    $sql = "UPDATE `users` SET `title`='$title', `author`='$author', `genre`='$genre', `publication_year`='$publication_year', `description`='$description' WHERE `id`='$book_id'";
+    $sql = "UPDATE `users` SET `title`='$title', `author`='$author', `genre`='$genre', `year`='$year', `description`='$description' WHERE `id`='$book_id'";
    
     $result = $conn->query($sql);
 
@@ -33,7 +33,7 @@ if (isset($_GET['id'])) {
             $title = $row['title'];
             $author = $row['author'];
             $genre = $row['genre'];
-            $publication_year = $row['publication_year'];
+            $year = $row['year'];
             $description = $row['description'];
             $id = $row['id'];
         }
@@ -135,8 +135,8 @@ if (isset($_GET['id'])) {
                         <label for="genre">Genre:</label>
                         <input type="text" id="genre" name="genre" value="<?php echo $genre; ?>">
 
-                        <label for="publication_year">Publication Year:</label>
-                        <input type="number" id="publication_year" name="publication_year" value="<?php echo $publication_year; ?>">
+                        <label for="year">Publication Year:</label>
+                        <input type="number" id="year" name="year" value="<?php echo $publication_year; ?>">
 
                         <label for="description">Description:</label>
                         <textarea id="description" name="description"><?php echo $description; ?></textarea>
