@@ -5,8 +5,8 @@ include "config.php";
 if (isset($_GET['id'])) {
     $user_id = $_GET['id'];
 
-    // SQL query to delete the user record
-    $sql = "DELETE FROM `users` WHERE `id`='$user_id'";
+    // SQL query to delete the book record
+    $sql = "DELETE FROM `books` WHERE `id`='$user_id'";
     $result = $conn->query($sql);
 
     if ($result === TRUE) {
