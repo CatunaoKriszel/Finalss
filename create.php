@@ -67,11 +67,11 @@
             $title = $_POST['title'];
             $author = $_POST['author'];
             $genre = $_POST['genre'];
-            $publication_year = $_POST['publication_year'];
+            $year = $_POST['year'];
             $description = $_POST['description'];
 
-            $sql = "INSERT INTO `users`(`title`, `author`, `genre`, `publication_year`, `description`) 
-                    VALUES ('$title', '$author', '$genre', '$publication_year', '$description')";
+            $sql = "INSERT INTO `users`(`title`, `author`, `genre`, `pyear`, `description`) 
+                    VALUES ('$title', '$author', '$genre', '$year', '$description')";
 
             $result = $conn->query($sql);
 
