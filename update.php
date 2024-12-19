@@ -11,7 +11,7 @@ if (isset($_POST['update'])) {
     $year = $_POST['year'];
     $description = $_POST['description'];
 
-    $sql = "UPDATE `users` SET `title`='$title', `author`='$author', `genre`='$genre', `year`='$year', `description`='$description' WHERE `id`='$book_id'";
+    $sql = "UPDATE `books` SET `title`='$title', `author`='$author', `genre`='$genre', `year`='$year', `description`='$description' WHERE `id`='$book_id'";
    
     $result = $conn->query($sql);
 
@@ -25,7 +25,7 @@ if (isset($_POST['update'])) {
 // Fetch book data for update
 if (isset($_GET['id'])) {
     $book_id = $_GET['id'];
-    $sql = "SELECT * FROM `users` WHERE `id`='$book_id'";
+    $sql = "SELECT * FROM `books` WHERE `id`='$book_id'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
