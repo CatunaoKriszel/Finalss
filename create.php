@@ -67,16 +67,16 @@
             $title = $_POST['title'];
             $author = $_POST['author'];
             $genre = $_POST['genre'];
-            $year = $_POST['year'];
+            $publication_year = $_POST['publication_year'];
             $description = $_POST['description'];
 
             $sql = "INSERT INTO `users`(`title`, `author`, `genre`, `year`, `description`) 
-                    VALUES ('$title', '$author', '$genre', '$year', '$description')";
+                    VALUES ('$title', '$author', '$genre', '$publication_year', '$description')";
 
             $result = $conn->query($sql);
 
             if ($result === TRUE) {
-                echo '<p class="notification">Book added successfully.</p>';
+                echo '<p class="notification">Book added successfully!.</p>';
             } else {
                 echo '<p class="notification error">Error: ' . $sql . '<br>' . $conn->error . '</p>';
             }
