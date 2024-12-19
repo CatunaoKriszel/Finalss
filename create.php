@@ -70,8 +70,8 @@
             $publication_year = $_POST['publication_year'];
             $description = $_POST['description'];
 
-            $sql = "INSERT INTO `users`(`title`, `author`, `genre`, `year`, `description`) 
-                    VALUES ('$title', '$author', '$genre', '$publication_year', '$description')";
+            $sql = "INSERT INTO `users`(`title`, `author`, `genre`, `publication_year`, `description`) 
+                    VALUES ('$title', '$author', '$genre', '$publicatioyear', '$description')";
 
             $result = $conn->query($sql);
 
