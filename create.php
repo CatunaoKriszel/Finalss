@@ -71,7 +71,7 @@
             $description = $_POST['description'];
 
             $sql = "INSERT INTO `users`(`title`, `author`, `genre`, `publication_year`, `description`) 
-                    VALUES ('$title', '$author', '$genre', '$publicatioyear', '$description')";
+                    VALUES ('$title', '$author', '$genre', '$publication_year', '$description')";
 
             $result = $conn->query($sql);
 
